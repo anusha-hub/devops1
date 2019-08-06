@@ -1,0 +1,146 @@
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ pwd
+/c/Users/aanis
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ git --version
+git version 2.22.0.windows.1
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ git config --global user.name "anusha-hub"
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ git config --global email.name "anusha.sekha@gmail.com"
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ git clone https://github.com/anusha-hub/devops1.git
+Cloning into 'devops1'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ ls -ld devops1/
+drwxr-xr-x 1 aanis 197609 0 Aug  6 22:13 devops1//
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ ls -lrta devops1/
+total 21
+drwxr-xr-x 1 aanis 197609  0 Aug  6 22:13 ../
+-rw-r--r-- 1 aanis 197609 27 Aug  6 22:13 README.md
+drwxr-xr-x 1 aanis 197609  0 Aug  6 22:13 ./
+drwxr-xr-x 1 aanis 197609  0 Aug  6 22:13 .git/
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~
+$ cd devops1/
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ ls -lrta
+total 21
+drwxr-xr-x 1 aanis 197609  0 Aug  6 22:13 ../
+-rw-r--r-- 1 aanis 197609 27 Aug  6 22:13 README.md
+drwxr-xr-x 1 aanis 197609  0 Aug  6 22:13 ./
+drwxr-xr-x 1 aanis 197609  0 Aug  6 22:13 .git/
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git branch -r
+  origin/HEAD -> origin/master
+  origin/master
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git fetch
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/anusha-hub/devops1
+ * [new branch]      developer-1 -> origin/developer-1
+ * [new branch]      developer-2 -> origin/developer-2
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git pull
+Already up to date.
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git branch -r
+  origin/HEAD -> origin/master
+  origin/developer-1
+  origin/developer-2
+  origin/master
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git branch
+* master
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ ^C
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ pwd
+/c/Users/aanis/devops1
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        2019
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git add .
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   2019
+
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git commit -m "OurFirstCommit"
+[master 45500a4] OurFirstCommit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2019
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/anusha-hub/devops1.git
+   30222f2..45500a4  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+aanis@LAPTOP-TQVR5AMN MINGW64 ~/devops1 (master)
+$
+
